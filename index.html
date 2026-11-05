@@ -2,12 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>文件下载</title>
+    <title>正在下载文件...</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // 页面加载完成后，自动触发跳转到 PDF 文件
+        window.onload = function() {
+            // 请把 "document.pdf" 换成你仓库里实际的 PDF 文件名
+            window.location.href = "document.pdf";
+        };
+    </script>
 </head>
-<body style="text-align: center; padding-top: 80px; font-family: sans-serif; background: #f9f9f9;">
-    <h2 style="color: #333;">正在为您准备文件...</h2>
-    <p style="color: #666; margin-bottom: 30px;">如果您没有自动开始下载，请点击下方按钮：</p>
-    <a href="test1.pdf" style="display: inline-block; padding: 14px 28px; background: #007aff; color: #fff; text-decoration: none; border-radius: 6px; font-size: 16px; font-weight: bold;">下载</a>
+<body style="text-align: center; padding-top: 100px; font-family: sans-serif; background: #fff;">
+    <p style="color: #666; font-size: 16px;">正在自动打开文件，请稍候...</p>
+    <p style="font-size: 14px; margin-top: 20px;">
+        如果没有自动下载，<a href="test1.pdf" style="color: #007aff; text-decoration: none;">请点击这里手动下载</a>
+    </p>
 </body>
 </html>
